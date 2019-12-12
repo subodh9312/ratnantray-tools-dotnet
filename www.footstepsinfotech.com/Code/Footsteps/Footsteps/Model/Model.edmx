@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MyTemplateModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MyTemplateModelStoreContainer">
+          <EntitySet Name="Comment" EntityType="MyTemplateModel.Store.Comment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Feedback" EntityType="MyTemplateModel.Store.Feedback" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CommentText" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="EntityId" Type="int" Nullable="false" />
+          <Property Name="EntityType" Type="int" Nullable="false" />
+          <Property Name="SubmitDate" Type="date" Nullable="false" />
+          <Property Name="SubmitterName" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="SubmitterEmail" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SubmitterWebsite" Type="varchar" MaxLength="120" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="80" />
+          <Property Name="CreatedOn" Type="date" />
+          <Property Name="LastModeratedBy" Type="varchar" MaxLength="80" />
+          <Property Name="LastModeratedOn" Type="date" />
+          <Property Name="Milestone" Type="varchar" Nullable="false" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="City" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="20" />
+          <Property Name="OverallExperience" Type="varchar" MaxLength="50" />
+          <Property Name="DissatisfiedWith" Type="varchar" MaxLength="200" />
+          <Property Name="CorrectIt" Type="varchar" MaxLength="500" />
+          <Property Name="Rating" Type="varchar" MaxLength="50" />
+          <Property Name="WebsiteComparison" Type="varchar" MaxLength="100" />
+          <Property Name="Suggestions" Type="text" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyTemplateModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FootstepsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Comment" EntityType="MyTemplateModel.Comment" />
+          <EntitySet Name="Feedback" EntityType="MyTemplateModel.Feedback" />
+        </EntityContainer>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CommentText" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="EntityId" Nullable="false" />
+          <Property Type="Int32" Name="EntityType" Nullable="false" />
+          <Property Type="DateTime" Name="SubmitDate" Nullable="false" />
+          <Property Type="String" Name="SubmitterName" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SubmitterEmail" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SubmitterWebsite" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="String" Name="LastModeratedBy" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastModeratedOn" />
+          <Property Type="String" Name="Milestone" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmailAddress" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OverallExperience" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DissatisfiedWith" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CorrectIt" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Rating" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WebsiteComparison" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Suggestions" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyTemplateModelStoreContainer" CdmEntityContainer="FootstepsEntities">
+          <EntitySetMapping Name="Comment">
+            <EntityTypeMapping TypeName="MyTemplateModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="Milestone" ColumnName="Milestone" />
+                <ScalarProperty Name="LastModeratedOn" ColumnName="LastModeratedOn" />
+                <ScalarProperty Name="LastModeratedBy" ColumnName="LastModeratedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="SubmitterWebsite" ColumnName="SubmitterWebsite" />
+                <ScalarProperty Name="SubmitterEmail" ColumnName="SubmitterEmail" />
+                <ScalarProperty Name="SubmitterName" ColumnName="SubmitterName" />
+                <ScalarProperty Name="SubmitDate" ColumnName="SubmitDate" />
+                <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+                <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Feedback">
+            <EntityTypeMapping TypeName="MyTemplateModel.Feedback">
+              <MappingFragment StoreEntitySet="Feedback">
+                <ScalarProperty Name="Suggestions" ColumnName="Suggestions" />
+                <ScalarProperty Name="WebsiteComparison" ColumnName="WebsiteComparison" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="CorrectIt" ColumnName="CorrectIt" />
+                <ScalarProperty Name="DissatisfiedWith" ColumnName="DissatisfiedWith" />
+                <ScalarProperty Name="OverallExperience" ColumnName="OverallExperience" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="MyTemplateModel.Comment" Width="1.5" PointX="0.75" PointY="0.75" Height="3.5186979166666656" />
+        <EntityTypeShape EntityType="MyTemplateModel.Feedback" Width="1.5" PointX="3.375" PointY="0.75" Height="3.1340950520833326" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

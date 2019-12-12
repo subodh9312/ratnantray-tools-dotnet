@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FE6A795-7BA1-4A28-949B-BC3527952B72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DynamicDataExtensions</RootNamespace>
+    <AssemblyName>DynamicDataExtensions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DecimalAttribute.cs" />
+    <Compile Include="Attributes\Enums\PageEnums.cs" />
+    <Compile Include="Attributes\Enums\SecurityEnums.cs" />
+    <Compile Include="Attributes\ExtensionMethods\AttributeExtensionMethods.cs" />
+    <Compile Include="Attributes\ExtensionMethods\ControlExtensionMethods.cs" />
+    <Compile Include="Attributes\EntityUIHintAttribute.cs" />
+    <Compile Include="Attributes\ExtensionMethods\EnumExtensionMethods.cs" />
+    <Compile Include="Attributes\ExtensionMethods\FilterExtensionMethods.cs" />
+    <Compile Include="Attributes\MultiColumnAttribute.cs" />
+    <Compile Include="Attributes\ExtensionMethods\SecurityExtensionMethods.cs" />
+    <Compile Include="Attributes\HideColumnInAttribute.cs" />
+    <Compile Include="Attributes\HtmlEditorAttribute.cs" />
+    <Compile Include="Attributes\ReportAttribute.cs" />
+    <Compile Include="Attributes\SecureColumnAttribute.cs" />
+    <Compile Include="Attributes\SecureTableAttribute.cs" />
+    <Compile Include="Controls\AdvancedEntityTemplateFactory.cs" />
+    <Compile Include="Controls\SecureFieldTemplateFactory.cs" />
+    <Compile Include="Controls\SecureLinkButton.cs" />
+    <Compile Include="CustomMembership\SqlStoredProcedureProfileProvider.cs" />
+    <Compile Include="CustomMembership\SqlTableProfileProvider.cs" />
+    <Compile Include="CustomMembership\UserNameAsEmailSqlMembershipProvider.cs" />
+    <Compile Include="Library\LinqExpressionHelper.cs" />
+    <Compile Include="Library\LinqHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routing\CustomMetaModel.cs" />
+    <Compile Include="Routing\CustomMetaTable.cs" />
+    <Compile Include="Routing\SecureDynamicDataRouteHandler.cs" />
+    <Compile Include="Routing\SecureMetaChildrenColumn.cs" />
+    <Compile Include="Routing\SecureMetaColumn.cs" />
+    <Compile Include="Routing\SecureMetaForeignKeyColumn.cs" />
+    <Compile Include="Routing\SecureMetaModel.cs" />
+    <Compile Include="Routing\SecureMetaTable.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

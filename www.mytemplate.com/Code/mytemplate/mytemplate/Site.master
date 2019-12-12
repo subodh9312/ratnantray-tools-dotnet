@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" CodeBehind="Site.master.cs" Inherits="mytemplate.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Dynamic Data Site</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+        <div id="header_inner" class="fixed">
+            <div id="logo">
+                <table>
+                    <tr>
+                        <td rowspan="2" style="color: White;">
+                            <img src="#" alt="Logo Here" />
+                        </td>
+                        <td valign="middle" style="font-size: 18px; color: #FFFFFF;">
+                            &nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" style="font-size: 28px; color: #FFFFFF;">
+                            &nbsp;My Template
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="/Default.aspx">Home</a></li>
+                    <li><a href="/m">On Mobile</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/WebPages/AboutUs.aspx">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="header-links">
+            <p>
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [<a href="/Account/Login.aspx" title="Sign In">Sign In</a> | <a href="/Account/Register.aspx"
+                            title="Register">Register</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome
+                        <asp:LoginName ID="HeadLoginName" runat="server" />
+                        ! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Sign out"
+                            LogoutPageUrl="~/Default.aspx" />
+                        | <a href="/Account/ChangePassword.aspx" title="Change Profile Password">Change Password</a>
+                        | <a href="/Account/ManageProfile.aspx" title="Update Profile">My Profile</a> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </p>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div id="left_Content">
+                <div id="left_section">
+                    <h3>
+                        Heading h3</h3>
+                    <table width="100%">
+                        <tr>
+                            <td width="50%">
+                                <ul class="bulletedArrowLeft">
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </td>
+                            <td width="50%">
+                                <ul class="bulletedArrowLeft">
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="bigArrowright">
+                        <a href="#" title="More ">More &raquo;</a></div>
+                    <br />
+                    <br />
+                </div>
+                <!-- End Of left Section -->
+                <div id="middle_section">
+                    <%-- TODO: Enable partial rendering by setting the EnablePartialRendering attribute to "true" to provide a smoother browsing experience.
+             Leaving partial rendering disabled will provide a better debugging experience while the application is in development. --%>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false"
+                        ScriptMode="Release" EnableCdn="true" />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <!-- End Of middle Section -->
+        </div>
+        <div id="right_Content">
+            <div id="right_section">
+                <h3>
+                    Now also in!</h3>
+                <table width="100%">
+                    <tr>
+                        <td width="50%">
+                            <ul class="bulletedArrowLeft">
+                                <li><a href="#" title="">Link 1</a></li>
+                                <li><a href="#" title="">Link 2</a></li>
+                                <li><a href="#" title="">Link 3</a></li>
+                                <li><a href="#" title="">Link 4</a></li>
+                            </ul>
+                        </td>
+                        <td width="50%">
+                            <ul class="bulletedArrowLeft">
+                                <li><a href="#" title="">Link 1</a></li>
+                                <li><a href="#" title="">Link 2</a></li>
+                                <li><a href="#" title="">Link 3</a></li>
+                                <li><a href="#" title="">Link 4</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- End Of right Section -->
+        </div>
+    </div>
+    <!-- End Of container -->
+    <!-- End Of Middle Background -->
+    <!-- End Of content area -->
+    <div id="footer">
+        <a href="/WebPages/AboutUs.aspx" title="About Us">about</a> | <a href="/WebPages/ContactUs.aspx"
+            title="Contact Us">contact</a> | <a href="/blog" title="My Template Blog">Blog</a>
+        | <a href="/WebPages/Disclaimer.aspx" title="My Template Disclaimer">disclaimer</a>
+        | <a href="/WebPages/TermsOfUse.aspx" title="My Template Terms of Use">terms of use</a>
+        | <a href="/WebPages/Feedback.aspx" title="Feedback">feedback</a>
+        <br />
+        <br />
+        Copyright © 2012 mytemplate.com All rights reserved. A <a href="http://www.footstepsinfotech.com"
+            target="_blank">footsteps infotech</a> venture!
+        <br />
+    </div>
+    <a href="/WebPages/Feedback.aspx" title="Feed Back" class="feedback">
+        <img src="#" height="80px" width="80px" title="Feed Back"
+            alt="Feed Back" />
+    </a>
+    </form>
+</body>
+</html>

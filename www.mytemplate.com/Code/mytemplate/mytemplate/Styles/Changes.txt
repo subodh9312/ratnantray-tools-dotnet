@@ -1,0 +1,3 @@
+Logo Size - 64x64
+Header Background Color : #440000
+h3 Background color : #990000

@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" CodeBehind="Site.master.cs" Inherits="Footsteps.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Footsteps Infotech Inc.</title>
+    <meta name="Description" content="Providing Software Development, Consulting Solutions, Utility Products, and Much Much More!!" />
+    <meta name="Keywords" content="Software company Pune, Software Company Dhule, Utility Products, SEO, SMO, etc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-44414370-1', 'footstepsinfotech.com');
+        ga('send', 'pageview');
+
+    </script>
+    <!--[if lt IE 9]>
+	    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <meta name="msvalidate.01" content="A2FCB82B2969F3C81381367D93654595" />
+    <%--<script type="text/javascript" src="/Scripts/js/jquery-1.6.js"></script>
+    <script type="text/javascript" src="/Scripts/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Scripts/js/atooltip.jquery.js"></script>
+    <script type="text/javascript" src="/Scripts/js/tms-0.3.js"></script>
+    <script type="text/javascript" src="/Scripts/js/tms_presets.js"></script>
+    <script type="text/javascript" src="/Scripts/js/Combined.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = '<%= Footsteps.Controller.Library.Constants.CookieLessDomain + "" %>';
+            var head = document.getElementsByTagName('head')[0];
+            head.appendChild(s);
+        };
+    </script>
+    <link rel="stylesheet" href="/Styles/css/Site.css" type="text/css" media="screen" />
+    <link rel="stylesheet" id="CssLink" runat="server" href="/Styles/css/Compressed.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/Scripts/js/Combined.js"></script>--%>
+    <!--[if lt IE 9]>
+		<script type="text/javascript" src="/Styles/js/html5.js"></script>
+		<link rel="stylesheet" href="/Styles/css/ie.css" type="text/css" media="all">
+		<![endif]-->
+    <!--[if lt IE 7]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+			</div>
+		<![endif]-->
+    <asp:Literal ID="JavascriptLiteral" runat="server" EnableViewState="false" Mode="PassThrough" />
+    <asp:Literal ID="CssLiteral" runat="server" EnableViewState="false" Mode="PassThrough" />
+    <script type="text/javascript">
+        $(function () {
+            var pull = $('#pull');
+            menu = $('#menu');
+
+            $(pull).click(function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background: url(<%= Footsteps.Controller.Library.Constants.CookieLessDomain + "/Styles/images/bg_top.png" %>) 0 0 repeat-x #000;">
+    <form id="form1" runat="server">
+    <div class="main">
+        <div id="header">
+            <div id="header-links">
+                <p>
+                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                        <AnonymousTemplate>
+                            [<a href="/Account/Login.aspx" title="Sign In">Sign In</a> | <a href="/Account/Register.aspx"
+                                title="Register">Join Us!</a> ]
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Welcome
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                            ! [
+                            <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Sign out"
+                                LogoutPageUrl="~/Default.aspx" />
+                            | <a href="/Account/ChangePassword.aspx" title="Change Profile Password">Change Password</a>
+                            | <a href="/Account/ManageProfile.aspx" title="Update Profile">My Profile</a> ]
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </p>
+            </div>
+            <div class="wrapper">
+                    <a href="/" id="logo">
+                        <img src='<%= Footsteps.Controller.Library.Constants.CookieLessDomain + "/Styles/images/logo.png" %>'
+                            alt="Logo" />
+                    </a>
+                <!-- <div id="search">
+                    <fieldset>
+                        <div class="bg">
+                            <input class="input" type="text" value="Search" onblur="if(this.value=='') this.value='Search'"
+                                onfocus="if(this.value =='Search' ) this.value=''" /></div>
+                    </fieldset>
+                </div> -->
+                <ul id="menu" runat="server" enableviewstate="false">
+                    <li id="default" runat="server"><a href="/" title="Home"><span>Home</span></a></li>
+                    <li id="about" runat="server"><a href="/WebPages/AboutUs.aspx" title="About"><span>Company</span></a></li>
+                    <li id="solution" runat="server"><a href="/WebPages/Solutions.aspx"><span>Solutions</span></a></li>
+                    <li id="services" runat="server"><a href="/WebPages/Services.aspx"><span>Services</span></a></li>
+                    <li id="careers" runat="server"><a href="/WebPages/Careers.aspx"><span>Careers</span></a></li>
+                    <li id="contact" class="last" runat="server"><a href="/WebPages/ContactUs.aspx" title="Contact">
+                        <span>Contacts</span></a></li>
+                </ul>
+                <a href="#" id="pull"></a>
+            </div>
+        </div>
+        <!--header end-->
+        <div class="clearfix">
+        </div>
+    </div>
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true"
+        EnableCdn="true" ScriptMode="Release" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="clearfix">
+    </div>
+    <div class="main">
+        <!--footer -->
+        <div id="footer">
+            <ul id="icons">
+                <!--<li class="first">Follow Us:</li>
+                <li><a href="#" class="normaltip" title="Facebook">
+                    <img src="/Styles/images/icon1.jpg" alt="" /></a></li>-->
+                <li><span class="normaltip" title="A Microsoft BizSpark Startup">
+                    <img src='<%= Footsteps.Controller.Library.Constants.CookieLessDomain + "/Styles/images/bizspark.png" %>'
+                        alt="BizSpark" width="182px" height="90px" /></span></li>
+                <!-- <li><a href="#" class="normaltip" title="Picasa">
+                    <img src="/Styles/images/icon3.jpg" alt="" /></a></li>
+                <li><a href="#" class="normaltip" title="YouTube">
+                    <img src="/Styles/images/icon4.jpg" alt="" /></a></li>-->
+            </ul>
+            Copyright &copy; 2013
+            <br />
+            <a href="/" title="Footsteps Infotech Inc." target="_blank">Footsteps Infotech Inc.
+            </a>
+            <br />
+        </div>
+        <!--footer end-->
+    </div>
+    <%-- <a href="/WebPages/Feedback.aspx" title="Feed Back" class="feedback">
+        <img src="/DynamicData/Content/Images/feedback.jpg" height="80px" width="80px" title="Feed Back"
+            alt="Feed Back" />
+    </a> --%>
+    </form>
+</body>
+</html>

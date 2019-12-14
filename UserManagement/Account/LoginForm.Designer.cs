@@ -36,7 +36,7 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.forgotPasswordLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.validator1 = new Itboy.Components.Validator(this.components);
+            this.validator1 = new Ratnantray.Components.Validator(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +65,7 @@
             this.validator1.SetRequiredMessage(this.userNameTextBox, "User name is required!");
             this.userNameTextBox.Size = new System.Drawing.Size(156, 20);
             this.userNameTextBox.TabIndex = 0;
-            this.validator1.SetType(this.userNameTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.userNameTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // passwordTextBox
             // 
@@ -75,7 +75,7 @@
             this.validator1.SetRequiredMessage(this.passwordTextBox, "Password is Required!");
             this.passwordTextBox.Size = new System.Drawing.Size(156, 20);
             this.passwordTextBox.TabIndex = 1;
-            this.validator1.SetType(this.passwordTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.passwordTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // loginButton
             // 
@@ -146,6 +146,6 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.LinkLabel forgotPasswordLinkLabel;
-        private Itboy.Components.Validator validator1;
+        private Ratnantray.Components.Validator validator1;
     }
 }

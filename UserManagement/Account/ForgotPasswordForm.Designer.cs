@@ -37,7 +37,7 @@
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.securityQuestionComboBox = new System.Windows.Forms.ComboBox();
-            this.validator1 = new Itboy.Components.Validator(this.components);
+            this.validator1 = new Ratnantray.Components.Validator(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +74,7 @@
             this.validator1.SetRequiredMessage(this.userNameTextBox, "Username is Required!");
             this.userNameTextBox.Size = new System.Drawing.Size(156, 20);
             this.userNameTextBox.TabIndex = 0;
-            this.validator1.SetType(this.userNameTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.userNameTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // securityAnswerTextBox
             // 
@@ -83,7 +83,7 @@
             this.validator1.SetRequiredMessage(this.securityAnswerTextBox, "Security Answer is Required!");
             this.securityAnswerTextBox.Size = new System.Drawing.Size(156, 20);
             this.securityAnswerTextBox.TabIndex = 2;
-            this.validator1.SetType(this.securityAnswerTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.securityAnswerTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // okButton
             // 
@@ -122,7 +122,7 @@
             this.validator1.SetRequiredMessage(this.securityQuestionComboBox, "Security Question is Required");
             this.securityQuestionComboBox.Size = new System.Drawing.Size(156, 21);
             this.securityQuestionComboBox.TabIndex = 1;
-            this.validator1.SetType(this.securityQuestionComboBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.securityQuestionComboBox, Ratnantray.Components.ValidationType.Required);
             // 
             // validator1
             // 
@@ -162,6 +162,6 @@
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.ComboBox securityQuestionComboBox;
-        private Itboy.Components.Validator validator1;
+        private Ratnantray.Components.Validator validator1;
     }
 }

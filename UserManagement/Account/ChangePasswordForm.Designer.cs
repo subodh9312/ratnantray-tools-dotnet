@@ -37,7 +37,7 @@
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.validator1 = new Itboy.Components.Validator(this.components);
+            this.validator1 = new Ratnantray.Components.Validator(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -75,20 +75,20 @@
             this.validator1.SetRequiredMessage(this.oldPasswordTextBox, "Old Password is Required");
             this.oldPasswordTextBox.Size = new System.Drawing.Size(156, 20);
             this.oldPasswordTextBox.TabIndex = 0;
-            this.validator1.SetType(this.oldPasswordTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.oldPasswordTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // confirmPasswordTextBox
             // 
             this.validator1.SetComparedControl(this.confirmPasswordTextBox, this.newPasswordTextBox);
             this.validator1.SetCompareMessage(this.confirmPasswordTextBox, "Password Confirmation Mismatch!");
-            this.validator1.SetCompareOperator(this.confirmPasswordTextBox, Itboy.Components.ValidationCompareOperator.Equal);
+            this.validator1.SetCompareOperator(this.confirmPasswordTextBox, Ratnantray.Components.ValidationCompareOperator.Equal);
             this.confirmPasswordTextBox.Location = new System.Drawing.Point(107, 60);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.PasswordChar = '*';
             this.validator1.SetRequiredMessage(this.confirmPasswordTextBox, "Password Confirmation is Required");
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(156, 20);
             this.confirmPasswordTextBox.TabIndex = 2;
-            this.validator1.SetType(this.confirmPasswordTextBox, ((Itboy.Components.ValidationType)((Itboy.Components.ValidationType.Required | Itboy.Components.ValidationType.Compare))));
+            this.validator1.SetType(this.confirmPasswordTextBox, ((Ratnantray.Components.ValidationType)((Ratnantray.Components.ValidationType.Required | Ratnantray.Components.ValidationType.Compare))));
             // 
             // newPasswordTextBox
             // 
@@ -98,7 +98,7 @@
             this.validator1.SetRequiredMessage(this.newPasswordTextBox, "New Password is Required");
             this.newPasswordTextBox.Size = new System.Drawing.Size(156, 20);
             this.newPasswordTextBox.TabIndex = 1;
-            this.validator1.SetType(this.newPasswordTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.newPasswordTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // okButton
             // 
@@ -158,6 +158,6 @@
         private System.Windows.Forms.TextBox newPasswordTextBox;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
-        private Itboy.Components.Validator validator1;
+        private Ratnantray.Components.Validator validator1;
     }
 }

@@ -33,7 +33,7 @@
             this.usersComboBox = new System.Windows.Forms.ComboBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.validator1 = new Itboy.Components.Validator(this.components);
+            this.validator1 = new Ratnantray.Components.Validator(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +54,7 @@
             this.validator1.SetRequiredMessage(this.usersComboBox, "Please Select a User");
             this.usersComboBox.Size = new System.Drawing.Size(170, 21);
             this.usersComboBox.TabIndex = 1;
-            this.validator1.SetType(this.usersComboBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.usersComboBox, Ratnantray.Components.ValidationType.Required);
             // 
             // okButton
             // 
@@ -105,6 +105,6 @@
         private System.Windows.Forms.ComboBox usersComboBox;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
-        private Itboy.Components.Validator validator1;
+        private Ratnantray.Components.Validator validator1;
     }
 }

@@ -41,7 +41,7 @@
             this.securityQuestionComboBox = new System.Windows.Forms.ComboBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.validator1 = new Itboy.Components.Validator(this.components);
+            this.validator1 = new Ratnantray.Components.Validator(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -95,14 +95,14 @@
             // 
             this.validator1.SetComparedControl(this.confirmPasswordTextBox, this.passwordTextBox);
             this.validator1.SetCompareMessage(this.confirmPasswordTextBox, "Password and Confirm Password should Match");
-            this.validator1.SetCompareOperator(this.confirmPasswordTextBox, Itboy.Components.ValidationCompareOperator.Equal);
+            this.validator1.SetCompareOperator(this.confirmPasswordTextBox, Ratnantray.Components.ValidationCompareOperator.Equal);
             this.confirmPasswordTextBox.Location = new System.Drawing.Point(117, 71);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.PasswordChar = '*';
             this.validator1.SetRequiredMessage(this.confirmPasswordTextBox, "Confirm Password is required");
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(231, 20);
             this.confirmPasswordTextBox.TabIndex = 2;
-            this.validator1.SetType(this.confirmPasswordTextBox, ((Itboy.Components.ValidationType)((Itboy.Components.ValidationType.Required | Itboy.Components.ValidationType.Compare))));
+            this.validator1.SetType(this.confirmPasswordTextBox, ((Ratnantray.Components.ValidationType)((Ratnantray.Components.ValidationType.Required | Ratnantray.Components.ValidationType.Compare))));
             // 
             // passwordTextBox
             // 
@@ -112,7 +112,7 @@
             this.validator1.SetRequiredMessage(this.passwordTextBox, "Password is required.");
             this.passwordTextBox.Size = new System.Drawing.Size(231, 20);
             this.passwordTextBox.TabIndex = 1;
-            this.validator1.SetType(this.passwordTextBox, ((Itboy.Components.ValidationType)((Itboy.Components.ValidationType.Required | Itboy.Components.ValidationType.Compare))));
+            this.validator1.SetType(this.passwordTextBox, ((Ratnantray.Components.ValidationType)((Ratnantray.Components.ValidationType.Required | Ratnantray.Components.ValidationType.Compare))));
             // 
             // userNameTextBox
             // 
@@ -121,7 +121,7 @@
             this.validator1.SetRequiredMessage(this.userNameTextBox, "User name is required.");
             this.userNameTextBox.Size = new System.Drawing.Size(231, 20);
             this.userNameTextBox.TabIndex = 0;
-            this.validator1.SetType(this.userNameTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.userNameTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // securityAnswerTextBox
             // 
@@ -130,7 +130,7 @@
             this.validator1.SetRequiredMessage(this.securityAnswerTextBox, "Security Answer is required!");
             this.securityAnswerTextBox.Size = new System.Drawing.Size(231, 20);
             this.securityAnswerTextBox.TabIndex = 5;
-            this.validator1.SetType(this.securityAnswerTextBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.securityAnswerTextBox, Ratnantray.Components.ValidationType.Required);
             // 
             // securityQuestionComboBox
             // 
@@ -147,7 +147,7 @@
             this.validator1.SetRequiredMessage(this.securityQuestionComboBox, "Security Question is required.");
             this.securityQuestionComboBox.Size = new System.Drawing.Size(231, 21);
             this.securityQuestionComboBox.TabIndex = 4;
-            this.validator1.SetType(this.securityQuestionComboBox, Itboy.Components.ValidationType.Required);
+            this.validator1.SetType(this.securityQuestionComboBox, Ratnantray.Components.ValidationType.Required);
             // 
             // okButton
             // 
@@ -184,7 +184,7 @@
             this.validator1.SetRequiredMessage(this.emailTextBox, "Confirm Password is required");
             this.emailTextBox.Size = new System.Drawing.Size(231, 20);
             this.emailTextBox.TabIndex = 3;
-            this.validator1.SetType(this.emailTextBox, ((Itboy.Components.ValidationType)((Itboy.Components.ValidationType.Required | Itboy.Components.ValidationType.RegularExpression))));
+            this.validator1.SetType(this.emailTextBox, ((Ratnantray.Components.ValidationType)((Ratnantray.Components.ValidationType.Required | Ratnantray.Components.ValidationType.RegularExpression))));
             // 
             // label6
             // 
@@ -241,7 +241,7 @@
         private System.Windows.Forms.ComboBox securityQuestionComboBox;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
-        private Itboy.Components.Validator validator1;
+        private Ratnantray.Components.Validator validator1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox emailTextBox;
     }
